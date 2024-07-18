@@ -30,6 +30,11 @@ if (process.env.NODE_ENV === 'dev') {
       process.env.PORT ?? ''
     }/swagger`,
   );
+import userRouter from './routes/user';
+
+app.use('/api', userRouter);
+
+  
 }
 
 // App hört im folgenden auf den Port, welcher über die Umgebungsvariable definiert ist
